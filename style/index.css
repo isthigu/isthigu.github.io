@@ -114,13 +114,13 @@ body {
   text-align: center;
   justify-content: space-around;
 }
-.projects .project_card .project_card_desc_tech {
+.project_card_desc_tech {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 10px;
 }
-.projects .project_card .project_card_desc_tech span {
+.project_card_desc_tech span {
   opacity: 0.75;
   margin-left: 5px;
   border: 1px solid #ffa500;
