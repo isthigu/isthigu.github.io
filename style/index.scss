@@ -130,8 +130,26 @@ body{
             padding: 7.5px;
         }
         .project_card_desc{
+            height: 150px;
             color: #ffffff50;
             text-align: center;
+            justify-content: space-around;
+        }
+        .project_card_desc_tech{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 10px;
+
+            span{
+                opacity: 0.75;
+                margin-left: 5px;
+                border: 1px solid $txtDestaque;
+                color: $txtDestaque;
+                border-radius: 7.5px;
+                padding: 5px 10px;
+                font-size: 0.75em;
+            }
         } 
     } 
 }

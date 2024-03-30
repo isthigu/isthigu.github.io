@@ -109,8 +109,25 @@ body {
   padding: 7.5px;
 }
 .projects .project_card .project_card_desc {
+  height: 150px;
   color: rgba(255, 255, 255, 0.3137254902);
   text-align: center;
+  justify-content: space-around;
+}
+.projects .project_card .project_card_desc_tech {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+.projects .project_card .project_card_desc_tech span {
+  opacity: 0.75;
+  margin-left: 5px;
+  border: 1px solid #ffa500;
+  color: #ffa500;
+  border-radius: 7.5px;
+  padding: 5px 10px;
+  font-size: 0.75em;
 }
 
 @media (max-width: 749px) {
