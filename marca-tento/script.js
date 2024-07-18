@@ -75,10 +75,10 @@ function marcarAmarelo(){
        let pts = Number(PONTOS_AMARELO.innerHTML);
        PONTOS_AMARELO.innerHTML = pts + pontosAmarelo;
        checaPonto(pts, PONTOS_AMARELO)
-       falarPontos(pontosAzul,"amarelo","mais");
+       falarPontos(pontosAmarelo,"amarelo","mais");
 }
 function removerAmarelo(){
     let pts = Number(PONTOS_AMARELO.innerHTML);
     PONTOS_AMARELO.innerHTML = pts - 1; 
-    falarPontos(pontosAzul,"amarelo","menos");
+    falarPontos(pontosAmarelo,"amarelo","menos");
 }
