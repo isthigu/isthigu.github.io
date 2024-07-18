@@ -1,0 +1,127 @@
+.flex {
+  display: flex;
+}
+
+.acenter {
+  align-items: center;
+}
+
+.jcenter {
+  justify-content: center;
+}
+
+.sombra {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1b203e;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  margin-top: 10px;
+}
+header .container {
+  flex: 0 0 80%;
+  border-radius: 7px;
+  background-color: #2d325c;
+  flex-direction: column;
+  padding: 15px 0;
+}
+header .container .img_nome {
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+header .container .img_nome img {
+  height: 110px;
+  border-radius: 100%;
+}
+header .container .social {
+  color: rgba(255, 255, 255, 0.3333333333);
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.3333333333);
+}
+header .container .social button {
+  all: unset;
+}
+header .container .social .social-icone {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+header .container .social .social-icone a {
+  margin: 10px 5%;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.3333333333);
+  font-size: 1.25em;
+}
+header .container .social .social-icone a:hover {
+  color: #ffa500;
+}
+
+main .container {
+  max-width: 80%;
+  border-radius: 7px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+main .container .card {
+  position: relative;
+  margin: 5px;
+  padding: 0 0 10px 0;
+  background-color: #2d325c;
+  min-width: 150px;
+  max-width: 300px;
+  height: 350px;
+  display: flex;
+  flex: 1 1 200px;
+  flex-flow: column wrap;
+  border-radius: 7px 7px;
+  overflow: hidden;
+}
+main .container .card .img-limite {
+  min-width: 150px;
+  max-width: 300px;
+  overflow: hidden;
+}
+main .container .card img {
+  border-radius: 7px 7px 0 0;
+  width: 100%;
+  max-height: auto;
+  transition: 0.5s ease-in-out;
+}
+main .container .card img:hover {
+  transform: scale(1.25);
+}
+main .container .card h2 {
+  margin-left: 10px;
+}
+main .container .card p {
+  margin: 7px;
+  color: rgba(255, 255, 255, 0.3333333333);
+}
+main .container .card a {
+  all: unset;
+  cursor: pointer;
+}
+main .container .card .tecnologias {
+  position: absolute;
+  bottom: 7px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+main .container .card .tecnologias span {
+  border: 1px solid #ffa500;
+  color: #ffa500;
+  font-size: 0.75em;
+  border-radius: 7px;
+  padding: 2px 5px;
+}/*# sourceMappingURL=style.css.map */

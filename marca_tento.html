@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: #1c1c1c;
+            height: 100vh;
+            width: 100vw;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section{
+            width: 360px;
+            height: 600px;
+            background-color: #232323;
+            border-radius: 7px;
+        }
+        .container{
+            height: 285px;
+        }
+        .espac{
+            height: 30px;
+        }
+        .top{
+            height:20%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .top.g1{
+            background-color: #0072f5;
+            border-radius: 7px 7px 0 0;
+        }
+        .top.g2{
+            background-color: #ffb800;
+            border-radius: 7px 7px 0 0;
+        }
+        .mid{
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bot{
+            height: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        button{
+            all: unset;
+            background-color: #fff;
+            color: #232323;
+            font-weight: bold;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        button:hover{
+            background-color: #ddd;
+            cursor: pointer;
+            transition: 0.15s linear;
+        }
+        .bot.g1{
+            background-color: #0072f5;
+            border-radius: 0 0 7px 7px;
+        }
+        .bot.g2{
+            background-color: #ffb800;
+            border-radius: 0 0 7px 7px;
+        }
+        .hidden{
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section>
+        <!-- GRUPO 1 -->
+        <div class="container">
+            <div class="top g1">Grupo A</div>
+            <div class="mid g1">0</div>
+            <div class="bot g1">
+                <button data-value="1">1</button>
+                <button data-value="3">3</button>
+                <button data-value="6">6</button>
+                <button data-value="9">9</button>
+                <button data-value="12">12</button>
+                <button data-value="-" class="botao_menos">-</button>
+                <input type="checkbox" id='chk_g1' class="hidden">
+            </div>
+        </div>
+
+        <!-- ESPACAMENTO -->
+        <div class="espac" id="espac">espac</div>
+
+        <!-- GRUPO 2 -->
+        <div class="container">
+            <div class="top g2">Grupo B</div>
+            <div class="mid g2">0</div>
+            <div class="bot g2">
+                <button data-value="1">1</button>
+                <button data-value="3">3</button>
+                <button data-value="6">6</button>
+                <button data-value="9">9</button>
+                <button data-value="12">12</button>
+                <button data-value="-">-</button>
+                <input type="checkbox" id='chk_g2' class="hidden">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const espac = document.getElementById('espac')
+
+        const buttons_g1 = [...document.querySelectorAll(".g1 button")]
+        const chk_g1 = document.getElementById('chk_g1')
+        const visor_g1 = document.querySelector(".mid.g1")
+
+
+        buttons_g1.forEach((e)=>{
+            e.addEventListener('click',()=>{
+                if(e.dataset.value == '-'){
+                    chk_g1.click();
+                    if(chk_g1.checked == true){
+                        e.style.backgroundColor = '#e74c3c'
+                    }else{
+                        e.style.backgroundColor = '#fff'
+                    }
+                }else{
+                    if (chk_g1.checked == true){
+                        visor_g1.innerHTML = Number(visor_g1.innerHTML) - Number(e.dataset.value)
+                    }else{
+                        visor_g1.innerHTML = Number(visor_g1.innerHTML) + Number(e.dataset.value)
+                    }
+                }
+                if(visor_g1.innerHTML >= 12){
+                    espac.innerHTML = 'VITORIA DO GRUPO A'
+                    visor_g1.innerHTML = 0;
+                }
+            })
+        })
+   
+ //--------------- G2 -----------------------------------------       
+
+        const buttons_g2 = [...document.querySelectorAll(".g2 button")]
+        const chk_g2 = document.getElementById('chk_g2')
+        var visor_g2 = document.querySelector(".mid.g2")
+
+        buttons_g2.forEach((e)=>{
+            e.addEventListener('click', ()=>{
+                if(e.dataset.value == '-'){
+                    chk_g2.click();
+                    if(chk_g2.checked == true){
+                        e.style.backgroundColor = '#e74c3c'
+                    }else{
+                        e.style.backgroundColor = '#fff'
+                    }
+                }else{
+                    if (chk_g2.checked == true){
+                        visor_g2.innerHTML = Number(visor_g2.innerHTML) - Number(e.dataset.value)
+                    }else{
+                        visor_g2.innerHTML = Number(visor_g2.innerHTML) + Number(e.dataset.value)
+                    }
+                }
+                if(visor_g2.innerHTML >= 12){
+                    espac.innerHTML = 'VITORIA DO GRUPO B'
+                    visor_g2.innerHTML = 0;
+                }
+            })
+        })
+
+    </script>
+
+</body>
+</html>
