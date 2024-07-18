@@ -1,0 +1,121 @@
+$bgMain : #f5e9e0;
+$amarelo: #f5d004;
+$azul: #6fc3d6;
+$verde: #68b642;
+$vermelho: #f54b54;
+$laranja: #f0ad00;
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contorno{
+    border: 2px solid #000;
+    border-radius: 7px;
+    padding: 7px 0 7px 0;
+    position: relative;
+}
+.contorno:after{
+    content:'';
+    border-radius: 7px;
+    position: absolute;
+    background-color: #000;
+    top: 5px;
+    right: -5px;
+    left: 5px;
+    bottom: -5px;
+    z-index: -1;
+}
+.selecionado{
+    background-color: $verde;
+}
+.marcar{
+    background-color: $verde;
+}
+.remover{
+    background-color: $vermelho;
+}
+*{
+    margin: 0;
+    padding: 0;
+    // background-color: rgba(50, 205, 50, 0.218) !important;
+}
+body{
+    background-color: #f5e9e0;
+    font-family: "Courier New", Courier, monospace;
+    min-width: 100vw;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    width: 100vw;
+    height: 90vh;
+    // background-color: red;
+    // max-width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;    
+}
+.container{
+    width: 80%;
+    max-width: 720px;
+    background-color: #fff;
+    flex:2 1 0;
+    margin-top: 10px;
+    .content{
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .header{
+        margin-top: -7px;
+        border-radius: 7px 7px 0 0;
+        padding: 2.5px;
+        border-bottom: 2px solid #000;
+    }
+    .pontos{
+        // background-color: green;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        flex-grow: 2;
+        font-size: 3em;
+    }
+    .controle{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        // justify-content: center;
+        // background-color: beige;
+        
+        button{
+            margin: 1%;
+            // flex:0 30%;
+            flex-grow: 1;
+        }
+    }
+    .acao{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-grow: 2;
+    }
+    // flex-grow: 1;
+    .acao button{
+        width: 40%;
+        height: 50px;
+    }
+}
+.azul{
+    background-color: $azul;
+}
+.amarelo{
+    background-color: $amarelo;
+}
+.fakeButton{
+    background-color: red;;
+}

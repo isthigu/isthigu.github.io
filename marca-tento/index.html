@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marca Tento</title>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container contorno">
+            <div class="header azul">
+                <h2>Time Azul</h2>
+            </div>
+            <div class="content">
+                 <div class="pontos pontos-azul">0</div>
+                 <div class="controle">
+                    <button onclick="seletorAzul(1)" class="contorno btnSeletorAzul">1</button>
+                    <button onclick="seletorAzul(3)" class="contorno btnSeletorAzul">3</button>
+                    <button onclick="seletorAzul(6)" class="contorno btnSeletorAzul">6</button>
+                    <button onclick="seletorAzul(9)" class="contorno btnSeletorAzul">9</button>
+                    <button onclick="seletorAzul(12)" class="contorno btnSeletorAzul">12</button>
+
+                </div>
+                <div class="acao">
+                    <button onclick="removerAzul()" class="contorno remover">REMOVER</button>
+                    <button onclick="marcarAzul()" class="contorno marcar">CONFIRMA</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container contorno">
+            <div class="header amarelo">
+                <h2>Time Amarelo</h2>
+            </div>
+            <div class="content">
+                 <div class="pontos pontos-amarelo">0</div>
+                 <div class="controle">
+                    <button onclick="seletorAmarelo(1)" class="contorno btnSeletorAmarelo">1</button>
+                    <button onclick="seletorAmarelo(3)" class="contorno btnSeletorAmarelo">3</button>
+                    <button onclick="seletorAmarelo(6)" class="contorno btnSeletorAmarelo">6</button>
+                    <button onclick="seletorAmarelo(9)" class="contorno btnSeletorAmarelo">9</button>
+                    <button onclick="seletorAmarelo(12)" class="contorno btnSeletorAmarelo">12</button>
+
+                </div>
+                <div class="acao">
+                    <button onclick="removerAmarelo()" class="contorno remover">REMOVER</button>
+                    <button onclick="marcarAmarelo()" class="contorno marcar">CONFIRMA</button>
+                </div>
+            </div>
+        </div>
+        
+
+
+    </main>
+</body>
+</html>
